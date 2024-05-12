@@ -46,8 +46,8 @@
   padding: 28px 28px 36px;
   max-width: 496px;
   box-sizing: border-box;
-  width: 100%;
-  height: 436px;
+  width: 436px;
+  height: 496px;
   border-radius: 20px;
 }
 
@@ -57,8 +57,34 @@
   width: 100%;
 }
 
+.modal__label-title {
+  margin-bottom: 10px;
+}
+
 .modal__input {
   display: block;
+  max-width: 440px;
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.modal__legend {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: bold;
+}
+
+.modal__label_type_radio {
+  padding-bottom: 10px;
+}
+
+.modal__radio-input {
+  accent-color: black;
 }
 
 .modal__radio-buttons {

@@ -53,7 +53,7 @@ function App() {
         onClose={closeActiveModal}
       >
         <label htmlFor="name" className="modal__label">
-          Name{" "}
+        <h3 className="modal__label-title">Name</h3>
           <input
             type="text"
             className="modal__input"
@@ -62,7 +62,7 @@ function App() {
           />
         </label>
         <label htmlFor="imageUrl" className="modal__label">
-          Image{" "}
+        <h3 className="modal__label-title">Image</h3>
           <input
             type="text"
             className="modal__input"
