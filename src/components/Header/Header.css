@@ -47,3 +47,8 @@
 .header__avatar {
   margin: 0;
 }
+
+.switch__container {
+  margin-left: auto;
+  display: flex;
+}
