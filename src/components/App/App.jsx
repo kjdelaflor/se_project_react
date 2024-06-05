@@ -14,6 +14,8 @@ import {
 } from "../../contexts/CurrentTemperatureUnitContext";
 import AddItemModal from "../../AddItemModal/AddItemModal";
 import Profile from "../Profile/Profile";
+import { getItems } from "../../utils/api";
+import ItemCard from "../ItemCard/ItemCard";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -53,8 +55,21 @@ function App() {
       .catch(console.error);
   }, []);
 
-  const onAddItem = (values) => {
-    console.log(values);
+  useEffect(() => {
+    getItems()
+      .then((data) => {
+        setClothingItems(data);
+      })
+      .catch(console.error);
+  }, []);
+
+  const onAddItem = ({ name, imageUrl, weather }) => {
+    return addItems({ name, imageUrl, weather })
+      .then((res) => {
+        setClothingItems([res, ...clothingItems]);
+        closeModal();
+      })
+      .catch(console.error);
   };
 
   return (
@@ -70,13 +85,20 @@ function App() {
               element={
                 <Main
                   weatherData={weatherData}
-                  onCardClick={handleCardClick}
+                  handleCardClick={handleCardClick}
+                  clothingItems={clothingItems}
                 />
               }
             />
             <Route
               path="/profile"
-              element={<Profile onCardClick={handleCardClick} />}
+              element={
+                <Profile
+                  onCardClick={handleCardClick}
+                  clothingItems={clothingItems}
+                  handleCardClick={handleAddClick}
+                />
+              }
             />
           </Routes>
 
