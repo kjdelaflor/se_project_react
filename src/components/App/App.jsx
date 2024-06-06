@@ -12,7 +12,7 @@ import {
   CurrentTemperatureUnitContext,
   DummyComponent,
 } from "../../contexts/CurrentTemperatureUnitContext";
-import AddItemModal from "../../AddItemModal/AddItemModal";
+import AddItemModal from "../AddItemModal/AddItemModal";
 import Profile from "../Profile/Profile";
 import { getItems, addItems, deleteCards } from "../../utils/api";
 import ItemCard from "../ItemCard/ItemCard";
