@@ -23,13 +23,30 @@
   line-height: 24px;
   padding: 10px;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
 }
 
 .modal__weather {
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 20px;
   margin: 0;
   padding: 0px 0px 0px 10px;
+}
+
+.modal__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__delete {
+  color: red;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  margin-top: 5px;
+  padding: 10px;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-weight: 500;
 }

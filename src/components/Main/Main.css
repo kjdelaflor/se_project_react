@@ -8,6 +8,9 @@
 }
 
 .cards__text {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
   font-weight: 700;
   font-size: 20px;
+  line-height: 24.8px;
+  color: rgba(0, 0, 0, 1);
 }
