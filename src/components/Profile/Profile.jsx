@@ -5,8 +5,8 @@ import ClothesSection from "../ClothesSection/ClothesSection";
 function Profile({
   onCardClick,
   clothingItems,
-  openItemModal,
-  closeModal,
+  handleCardClick,
+  closeActiveModal,
   onAddItem,
 }) {
   return (
@@ -18,8 +18,8 @@ function Profile({
         <ClothesSection
           onCardClick={onCardClick}
           clothingItems={clothingItems}
-          openItemModal={openItemModal}
-          closeModal={closeModal}
+          handleCardClick={handleCardClick}
+          closeActiveModal={closeActiveModal}
           onAddItem={onAddItem}
         />
       </section>
