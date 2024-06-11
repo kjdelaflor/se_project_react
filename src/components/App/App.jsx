@@ -53,8 +53,7 @@ function App() {
   };
 
   const handleToggleSwitchChange = () => {
-    setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F"); 
-    setCurrentTemperatureUnit(currentTemperatureUnit === "C" ? "F" : "C"); 
+    setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");  
   };
 
   useEffect(() => {
